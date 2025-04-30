@@ -1,0 +1,93 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Logo Styling */
+.logo-link {
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    display: block;
+    margin-top: 1.5rem;
+}
+
+.logo-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+/* Search Form Styling */
+.search-form {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.search-input {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.search-button {
+    padding: 0.8rem 1.5rem;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #45a049;
+}
+
+/* User Info Section */
+.user-info {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.welcome-message {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.auth-link {
+    font-size: 1rem;
+    color: #4CAF50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.auth-link:hover {
+    color: #45a049;
+}
+
+/* Separator Line */
+.separator {
+    margin: 2rem 0;
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .search-form {
+        flex-direction: column;
+    }
+
+    .search-input {
+        width: 90%;
+    }
+}

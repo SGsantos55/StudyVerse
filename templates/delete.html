@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Delete{% endblock title %}
+{% load static %}
+{% block nothing %}<link rel="stylesheet" href="{% static 'styles/delete.css' %}">{% endblock nothing %}
+{% block body %}
+<div class="container">
+    <h1>Confirm Deletion</h1>
+    <p class="delete-text">Are you sure you want to delete <strong>{{ obj.name }}</strong>?</p>
+    
+    <div class="button-group">
+        <a href="{% url 'home' %}" class="cancel-btn">Go Back</a>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <button type="submit" class="delete-btn">Delete</button>
+        </form>
+    </div>
+</div>
+{% endblock body %}

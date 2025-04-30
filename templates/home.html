@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}HomePage{% endblock title %}
+{% load static %}
+{% block nothing %}<link rel="stylesheet" href="{% static 'styles/home.css' %}">{% endblock nothing %}
+
+{% block body %}
+<!-- Grid container with custom grid layout -->
+<div class="my-container">
+  <!-- Sidebar for Topic -->
+  <div class="sidebar topic-sidebar">
+    {% include "topiccomp.html" %}
+  </div>
+
+  <!-- Main content with Rooms & Feed -->
+  <div class="main-content">
+    <div class="rooms-info">
+      <p>{{ roomscount }} rooms available</p>
+      <a href="{% url 'create' %}" class="btn-create-room">Create Room</a>
+    </div>
+
+    <hr class="divider">
+
+    {% include "feedcomp.html" %}
+  </div>
+
+  <!-- Sidebar for Activity -->
+  <div class="sidebar activity-sidebar">
+    {% include "activitycomp.html" %}
+  </div>
+</div>
+
+<!-- Load JavaScript -->
+
+{% endblock body %}

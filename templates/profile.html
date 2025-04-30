@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}ProfilePage{% endblock title %}
+{% load static %}
+
+{% block nothing %}<link rel="stylesheet" href="{% static 'styles/profile.css' %}">{% endblock nothing %}
+
+{% block body %}
+<!-- Profile page content -->
+<h1 class="profile-title">{{ user.username }}</h1>
+
+
+<!-- Profile container with grid layout -->
+<div class="profile-container">
+    <!-- Sidebar with topic section -->
+    <div class="sidebar topic">
+        <h2>Topic Overview</h2>
+        {% include "topiccomp.html" %}
+    </div>
+
+    <!-- Main content section with feed -->
+    <div class="main-content">
+        <h2>Recent Feed</h2>
+        {% include "feedcomp.html" %}
+    </div>
+    
+    <!-- Sidebar with activity section -->
+    <div class="activity">
+        <h2>Activity</h2>
+        {% include "activitycomp.html" %}
+    </div>
+</div>
+
+<!-- Link to the JavaScript file -->
+<script src="{% static 'styles/profile.js' %}"></script>
+{% endblock body %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Signup{% endblock title %}
+{% load static %}
+{% block nothing %}<link rel="stylesheet" href="{% static 'styles/signup.css' %}">{% endblock nothing %}
+
+{% block body %}
+<!-- Signup Form Section -->
+<div class="signup-container">
+    <h1 class="signup-title">Create an Account</h1>
+    <form method='POST' action='' class="signup-form">
+        {% csrf_token %}
+        {{ signup }} <!-- Assuming this includes the signup fields like username, email, password, etc. -->
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+    <p>Already have an account? <a href='{% url 'login_user' %}'>Login</a></p>
+</div>
+{% endblock body %}

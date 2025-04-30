@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}RoomPage{% endblock title %}
+{% load static %}
+
+{% block nothing %}<link rel="stylesheet" href="{% static 'styles/room.css' %}">{% endblock nothing %}
+
+{% block body %}
+
+
+
+<!-- Room page content -->
+<h1 class="room-title">{{ room.name }}</h1>
+
+<div class="room-container">
+    <!-- Left section with room details and conversation -->
+    <div class="room-details">
+        <div class="room-description">
+            <p>{{ room.description }}</p>
+        </div>
+
+        <div class="comment-wrapper">
+            <h3>Conversation</h3>
+            <hr>
+
+            {% for message in messages %}
+            <div class="message">
+                {% if request.user.is_authenticated %}
+                {% if request.user == message.user %}
+                <a href="{% url 'delete_message' pk=message.id %}" class="delete-btn">Delete</a>
+                {% endif %}
+                {% endif %}
+                <small class="message-meta">@{{ message.user }} - {{ message.created|timesince }} ago</small>
+                <p class="message-body">{{ message.body }}</p>
+                <hr>
+            </div>
+            {% endfor %}
+
+            {% if request.user.is_authenticated %}
+            <div class="comment-form">
+                <form method="POST" action="">
+                    {% csrf_token %}
+                    <input type="text" name="body" placeholder="Write your message here..." class="message-input" />
+                </form>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Right section with participants -->
+    <div class="participants">
+        <h3>Participants</h3>
+        <div class="participant-list">
+            {% for user in participants %}
+            <div class="participant">@{{ user.username }}</div>
+            <hr>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<!-- Link to the JavaScript file -->
+<script src="{% static 'styles/room.js' %}"></script>
+
+{% endblock body %}

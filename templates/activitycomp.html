@@ -1,0 +1,19 @@
+<h3>Recent Activity</h3>
+<hr class="divider">
+
+{% for message in room_messages %}
+<div class="activity-item">
+  <div class="activity-meta">
+    <small><a href="{% url 'profile' message.user.id %}" class="user-link">@{{ message.user }}</a></small>
+    <small>{{ message.created | timesince }} ago, replied to '<a href='{% url 'room' pk=message.room.id %}' class="room-link">{{ message.room.name }}</a>'</small>
+  </div>
+  <p class="activity-message">{{ message.body }}</p>
+  
+  {% if request.user.is_authenticated %}
+    {% if request.user == message.user %}
+      <a href="{% url 'delete_message' pk=message.id %}" class="action-btn">Delete</a>
+    {% endif %}
+  {% endif %}
+  <hr class="activity-divider">
+</div>
+{% endfor %}

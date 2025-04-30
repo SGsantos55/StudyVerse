@@ -1,0 +1,7 @@
+<div class="browse-topics">
+  <h2>Browse Topics</h2>
+  <a href="{% url 'home' %}">All</a>
+  {% for room in topic %}
+    <a href="{% url 'home' %}?q={{ room.topic }}">{{ room.topic }}</a>
+  {% endfor %}
+</div>

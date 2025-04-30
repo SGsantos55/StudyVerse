@@ -1,0 +1,71 @@
+/* Navbar Wrapper */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 12px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 0 0 12px 12px;
+  flex-wrap: wrap;
+}
+
+/* Brand Title */
+.navbar .brand h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Center Search Bar */
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.search-form input[type="search"] {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+}
+
+.search-form button {
+  padding: 6px 12px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Right Side */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.user-greet {
+  margin: 0;
+  color: #333;
+}
+
+.auth-link {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.auth-link:hover {
+  color: #0056b3;
+}
