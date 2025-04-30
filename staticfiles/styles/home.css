@@ -1,0 +1,208 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and layout */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    padding: 20px;
+}
+
+/* Grid container layout */
+.my-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Topic Sidebar */
+.topic-sidebar {
+    min-height: 400px;
+}
+
+/* Activity Sidebar */
+.activity-sidebar {
+    min-height: 400px;
+}
+
+/* Main Content */
+.main-content {
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Room Info Section */
+.rooms-info {
+    margin-bottom: 20px;
+}
+
+.rooms-info .btn-create-room {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.rooms-info .btn-create-room:hover {
+    background-color: #45a049;
+}
+
+/* Room List Styling */
+.room-item {
+    padding: 15px;
+    background-color: #fafafa;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.room-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.action-btn {
+    background-color: #ff3b3b;
+    color: white;
+    padding: 2.5px 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+.action-btn:hover {
+    background-color: #e02f2f;
+}
+
+.room-details {
+    margin-top: 10px;
+}
+
+.room-link {
+    text-decoration: none;
+    color: #4CAF50;
+}
+
+.room-link:hover {
+    text-decoration: underline;
+}
+
+.host-link {
+    font-weight: bold;
+    color: #333;
+}
+
+.room-topic {
+    font-size: 1rem;
+    color: #777;
+}
+
+.room-divider {
+    margin-top: 10px;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+/* Activity Item Styling */
+.activity-item {
+    padding: 15px;
+    background-color: #fafafa;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.activity-meta {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.activity-message {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.user-link {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.user-link:hover {
+    text-decoration: underline;
+}
+
+.activity-divider {
+    margin-top: 15px;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+.divider {
+    margin: 15px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+/* Container Styling */
+.browse-topics {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+  }
+  
+  /* Heading Styling */
+  .browse-topics h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  /* Topic Links Wrapper */
+  .browse-topics a {
+    display: inline-block;
+    margin: 6px 8px 6px 0;
+    padding: 8px 16px;
+    background-color: #ffffff;
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+  }
+  
+  /* Hover Effect */
+  .browse-topics a:hover {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+  
+  /* Active Link Styling */
+  .browse-topics a.active {
+    background-color: #343a40;
+    color: white;
+    border-color: #343a40;
+  }
+  

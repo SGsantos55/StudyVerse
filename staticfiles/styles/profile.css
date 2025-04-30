@@ -1,0 +1,131 @@
+/* Global Styles */
+body {
+    background-color: #f4f4f9; /* Light gray background for the whole page */
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+/* Profile Title */
+.profile-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+
+/* Profile Container */
+.profile-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 30px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 1200px;
+    background-color: #ffffff; /* White background for the profile content */
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Sidebar */
+.sidebar, .activity {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Topic Sidebar */
+.topic {
+    grid-column: 1;
+}
+
+.topic h2 {
+    font-size: 24px;
+    color: #333; /* Changed to black for consistency */
+    margin-bottom: 10px;
+}
+
+/* Topic Links */
+.topic a {
+    color: #3498db;
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.topic a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content (Feed) */
+.main-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h2 {
+    font-size: 24px;
+    color: #333; /* Changed to black for consistency */
+    margin-bottom: 15px;
+}
+
+/* Activity Item */
+.activity-item {
+    padding: 15px;
+    border-bottom: 1px solid #e1e1e1;
+    margin-bottom: 15px;
+}
+
+.activity-meta {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #7f8c8d; /* Light gray for metadata */
+}
+
+.activity-message {
+    margin: 10px 0;
+    color: #34495e;
+}
+
+.activity-divider {
+    border-top: 1px solid #e1e1e1;
+    margin-top: 15px;
+}
+
+/* Room Feed */
+.room-item {
+    padding: 15px;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.room-actions {
+    margin-bottom: 10px;
+}
+
+.room-title {
+    font-size: 20px;
+    color: #333; /* Changed to black for consistency */
+}
+
+.room-topic {
+    color: #7f8c8d;
+}
+
+
+
+
+
+
+/* Hover Effect for Room Item */
+.room-item:hover {
+    background-color: #ecf0f1;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
