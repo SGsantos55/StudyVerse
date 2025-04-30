@@ -1,2 +1,1 @@
-web: gunicorn oneshot.wsgi
-
+web: gunicorn oneshot.wsgi:application
