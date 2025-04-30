@@ -1,1 +1,1 @@
-web: gunicorn studyverse.wsgi
+web: gunicorn oneshot.wsgi
