@@ -1,1 +1,1 @@
-web: python manage.py shell -c "from django.contrib.auth.models import User; User.objects.filter(username='santos').exists() or User.objects.create_superuser('santos', 'santosgadtaula@gmail.com', 'santos@143')"
+web: gunicorn oneshot.wsgi:application
